@@ -501,10 +501,18 @@ h1{
     
     /* Sekcja About */
     #about {
-        padding: 150px 0; /* mniejsze odstępy */
-        background-position: center;
+        background-position-x:75%;
+        display: flex;
+        padding-top: 400px;
     }
-    .photo, .tile {
+    .tile{
+        border-radius: 30px;
+        width: 90%;
+        margin: 0 2.5% 0 2.5%;
+        padding: 20px 5% 30px 5%;
+
+    }
+    .photo{
         width: 80%;
         margin: auto;
         float: none;
