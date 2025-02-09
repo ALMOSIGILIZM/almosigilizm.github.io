@@ -1,31 +1,7 @@
-/*Media*/
-@media (max-width: 768px) {
-    #products, #productsHidden {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .tile {
-        width: 100%;
-        margin: 20px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    #products, #productsHidden {
-        grid-template-columns: 1fr;
-    }
-    .tile {
-        width: 100%;
-        margin: 10px 0;
-    }
-}
-
-
-
-
 
 /* Global styles */
 html, body {
+    width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -203,7 +179,7 @@ img {
     margin: 70px -5% 70px 10%;
 }
 .tile {
-    height: 350px;
+    min-height: 350px;
     width: 40%;
     margin: 35px 0 0px 10%;
     background-color: #111;
@@ -488,4 +464,69 @@ h1{
 
 #regulaminy a:hover {
     color: #555;
+}
+
+/*Media*/
+@media screen and (max-width: 1024px) {
+    #products, #productsHidden {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media  screen and (max-width: 768px) {
+    /* Globalne zmiany */
+    html, body {
+        font-size: 16px;
+        /* Możesz dostosować marginesy/padding, jeśli potrzeba */
+    }
+
+    #info{
+        font-size: 12px;
+
+    }
+    #header{
+        margin-top: 25px;
+    }
+    #header a img {
+        width: 90%; /* zmniejszenie rozmiaru logo */
+    }
+
+    /* Nawigacja */
+    #nav {
+        opacity: 0.9;
+        top: 30px;
+        right: 10px;
+        width: auto;
+        padding: 10px;
+    }
+    
+    /* Sekcja About */
+    #about {
+        padding: 150px 0; /* mniejsze odstępy */
+        background-position: center;
+    }
+    .photo, .tile {
+        width: 80%;
+        margin: auto;
+        float: none;
+    }
+    
+    /* Produkty */
+    #products, #productsHidden {
+        grid-template-columns: 1fr; /* pojedyncza kolumna na mniejszych ekranach */
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    /* Dialog */
+    #dialog {
+        width: 90%;
+        max-width: 300px;
+    }
+    
+    /* Stopka */
+    #footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
 }
