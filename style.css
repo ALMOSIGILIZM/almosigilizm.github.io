@@ -488,13 +488,6 @@ h1{
         width: 90%;
     }
 
-    #nav {
-        opacity: 0.9;
-        top: 30px;
-        right: -3px;
-        width: auto;
-        padding: 10px;
-    }
     
     /* Sekcja About */
     #about {
