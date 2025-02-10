@@ -23,14 +23,14 @@ document.querySelectorAll(".write-btn").forEach(button => {
     button.addEventListener("click", function () {
         const productElement = this.closest(".product");
         const productTitle = productElement.querySelector("h3").innerText;
-        const message = `Hej, jestem zainteresowany koszulką \"${productTitle}\"`;
+        const message = `Hej, jestem zainteresowany koszulką \"${productTitle}\" [z takim samym / z innym tekstem], w rozmiarze [S/M/L/XL/XXL]`;
         showDialog(message);
     });
 });
 document.querySelectorAll(".custom-btn").forEach(button => {
     button.addEventListener("click", function () {
         const productElement = this.closest(".product");
-        const message = `Hej, jestem zainteresowany własną koszulką. Na przodzie chciałbym: [WPISZ], a na tyle: [WPISZ], w [PODAJ KOLORY] takich kolorach. `;
+        const message = `Hej, jestem zainteresowany custom koszulką. Na przodzie: [WPISZ], a na tyle: [WPISZ], w [PODAJ KOLORY] takiej kolorystyce, rozmiar [S/M/L/XL/XXL]. `;
         showDialog(message);
     });
 });
