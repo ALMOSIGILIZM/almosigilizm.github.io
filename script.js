@@ -17,20 +17,22 @@ function hideDialog() {
 
     overlay.style.display = "none";
     dialog.style.display = "none";
+    dodatkowe.style.display = "none";
 }
 
 document.querySelectorAll(".write-btn").forEach(button => {
     button.addEventListener("click", function () {
         const productElement = this.closest(".product");
         const productTitle = productElement.querySelector("h3").innerText;
-        const message = `Hej, jestem zainteresowany koszulką \"${productTitle}\" [z takim samym / z innym tekstem], w rozmiarze [S/M/L/XL/XXL]`;
+        const message = `Hej, jestem zainteresowany koszulką \"${productTitle}\"\n TEKST: [Taki sam / Podaj]\n KOLORYSTYKA: [Taka sama / Podaj]\n ROZMIAR: [S/M/L/XL/XXL]`;
         showDialog(message);
+        dodatkowe.style.display = "block";
     });
 });
 document.querySelectorAll(".custom-btn").forEach(button => {
     button.addEventListener("click", function () {
         const productElement = this.closest(".product");
-        const message = `Hej, jestem zainteresowany custom koszulką. Na przodzie: [WPISZ], a na tyle: [WPISZ], w [PODAJ KOLORY] takiej kolorystyce, rozmiar [S/M/L/XL/XXL]. `;
+        const message = `Hej, jestem zainteresowany customem \n PRZÓD: [WPISZ] \n TYŁ: [WPISZ]\n KOLORY: [PODAJ KOLORY]\n ROZMIAR: [S/M/L/XL/XXL]. `;
         showDialog(message);
     });
 });
