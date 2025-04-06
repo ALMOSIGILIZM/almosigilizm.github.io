@@ -27,6 +27,7 @@ img {
 
 /* Button styles */
 
+button,
 .contact button,
 #dialog button, 
 #dialog a {
@@ -139,8 +140,8 @@ img {
 
 /* About section */
 #about{
-    padding: 300px 0 200px 0;
-    background-image: url(photos/problem.png);
+    padding: 200px 0 200px 0;
+    background-image: url(photos/pro8l3m.png);
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -152,8 +153,6 @@ img {
 
 #aboutcustom {
     background-color: #111;
-    margin-bottom: 50px;
-    padding: 90px 0 90px 0;
 }
 
 #about h2, #aboutcustom h2 {
@@ -162,29 +161,33 @@ img {
 #about p, #aboutcustom p {
     font-size: 20px;
 }
+#about ul{
+    font-size: 18px;
+}
 .photo {
     position: relative;
     width: 35%;
-    height: 500px;
-    background-image: url(photos/lufen_machen.png);
-    background-size: cover;
-    border: 5px solid #111;
+    min-height: 600px;
+    background-image: url(photos/ico2.png);
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
     float: left;
-    background-position-y: 60%;
 }
 #aboutcustom .photo {
-    border: 5px solid #f4f4f4;
     margin: 70px -5% 70px 10%;
 }
 .tile {
     min-height: 350px;
     width: 40%;
-    margin: 35px 0 0px 10%;
     background-color: #111;
     float: left;
     text-align: left;
     padding: 20px 5% 30px 2.5%;
     color: #fff;
+}
+#aboutcustom> .tile{
+    margin: 120px 0 0px 10%;
 }
 
 
@@ -196,6 +199,7 @@ img {
 h1{
     font-size: 36px;
     text-align: center;
+    padding-top: 30px;
     padding-bottom: 70px;
     border-bottom:8px solid #111 ;
 }
@@ -259,6 +263,7 @@ h1{
 
 
 /* Dialog */
+
 #dialog {
     display: none;
     position: fixed;
@@ -276,6 +281,14 @@ h1{
     font-size: 14px;
     text-align: center;
 }
+#dialog ul {
+    text-align: left;
+    margin-left: 2.5%;
+}
+.size{
+    margin-right: 5px;
+    padding-right: 2px;
+}
 #dialog textarea {
     width: 90%;
     height: 100px;
@@ -283,7 +296,7 @@ h1{
     margin-top: 30px;
     padding: 10px;
     border: 1px solid #ccc;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 5px;
     ; 
     resize: none;
@@ -306,7 +319,9 @@ h1{
 #dialog button:hover, #dialog a:hover {
     background: #555; 
 }
-
+#dodatkowe{
+    display: none;
+}
 #overlay {
     display: none;
     position: fixed;
@@ -469,6 +484,33 @@ h1{
     #products, #productsHidden {
         grid-template-columns: repeat(2, 1fr);
     }
+    /* Sekcja About */
+    #about {
+        background-position-x:75%;
+        background-position-y: -120px;
+        margin-bottom: -120px;
+        margin-top: -120px;
+        min-height:  800px;
+        background-size: cover;
+        
+    }
+    .tile{
+        border-radius: 10px;
+        width: 80%;
+        line-height: 30px;
+        margin: 140px 5% 50px 5%;
+        padding: 20px 5% 30px 5%;
+
+
+    }
+    .photo{
+        width: 80%;
+    }
+    #aboutcustom > .tile {
+        margin-left: 5%;
+        margin-top: -100px;
+        margin-bottom: 100px;
+    }
 }
 @media  screen and (max-width: 768px) {
 
@@ -493,25 +535,34 @@ h1{
     #about {
         background-position-x:75%;
         background-position-y: -120px;
-        margin-bottom: -180px;
+        margin-bottom: -120px;
+        margin-top: -120px;
         min-height:  600px;
         background-size: cover;
         
     }
     .tile{
-        border-radius: 30px;
+        border-radius: 10px;
         width: 80%;
+        line-height: 30px;
         margin: 0 5% 50px 5%;
         padding: 20px 5% 30px 5%;
+
 
     }
     .photo{
         width: 80%;
-        margin: auto;
-        border-radius: 30px;
+    }
+    #aboutcustom > .tile {
+        margin-left: 5%;
+        margin-top: -100px;
+        margin-bottom: 100px;
     }
     
     /* Produkty */
+    h1{
+        padding: 16px;
+    }
     #products, #productsHidden {
         grid-template-columns: 1fr; /* pojedyncza kolumna na mniejszych ekranach */
         gap: 20px;
@@ -523,11 +574,12 @@ h1{
         width: 90%;
         max-width: 300px;
     }
-    
     /* Stopka */
     #footer {
         flex-direction: column;
-        text-align: center;
-        padding: 15px;
+        text-align: left;     
+    }
+    #footer ul{
+        margin-left: -10%;
     }
 }
