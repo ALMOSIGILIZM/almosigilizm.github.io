@@ -204,13 +204,14 @@ button,
 /*Main*/
 
 h1{
-    font-size: 36px;
+    font-size: 76px;
     text-align: center;
     padding-top: 30px;
     padding-bottom: 70px;
     border-bottom:8px solid #111 ;
     letter-spacing:1px;
     font-weight: 100;
+    font-family: GTA;
 }
 
 
@@ -578,6 +579,7 @@ h1{
     /* Produkty */
     h1{
         padding: 16px;
+        font-size: 64px;
     }
     #products, #productsHidden {
         grid-template-columns: 1fr; /* pojedyncza kolumna na mniejszych ekranach */
