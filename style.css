@@ -5,15 +5,19 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: Helvetica, Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
     display: flex;
     flex-direction: column;
     scroll-behavior: smooth;
+    font-family: Helvetica;
 
 }
 
+@font-face {
+    font-family: GTA;
+    src: url(fonts/Jockey\ Full\ Of\ Bourbon.ttf);
+  }
 img {
     max-width: 100%;
     height: auto;
@@ -156,7 +160,10 @@ button,
 }
 
 #about h2, #aboutcustom h2 {
-    font-size: 24px;
+    font-size: 60px;
+    font-family: GTA;
+    font-weight: 100;
+    letter-spacing: 2px;
 }
 #about p, #aboutcustom p {
     font-size: 20px;
@@ -202,6 +209,8 @@ h1{
     padding-top: 30px;
     padding-bottom: 70px;
     border-bottom:8px solid #111 ;
+    letter-spacing:1px;
+    font-weight: 100;
 }
 
 
@@ -230,6 +239,7 @@ h1{
     transform: translateY(-30px);
     cursor: pointer;
 }
+
 
 #showProducts {
     background-color: #000;
@@ -557,6 +567,11 @@ h1{
         margin-left: 5%;
         margin-top: -100px;
         margin-bottom: 100px;
+    }
+    #about h2, #aboutcustom h2{
+        text-align: center;
+        font-size: 64px;
+        letter-spacing: 5px;
     }
     
     /* Produkty */
